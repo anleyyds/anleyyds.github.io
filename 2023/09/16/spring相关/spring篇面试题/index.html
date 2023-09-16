@@ -1,0 +1,443 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Java面试题（spring全家桶） | Dog博客</title><meta name="author" content="Dog"><meta name="copyright" content="Dog"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="spring中常遇到的问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java面试题（spring全家桶）">
+<meta property="og:url" content="https://anleyyds.github.io/2023/09/16/spring%E7%9B%B8%E5%85%B3/spring%E7%AF%87%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
+<meta property="og:site_name" content="Dog博客">
+<meta property="og:description" content="spring中常遇到的问题">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://p5.qhimg.com/t01699a03085db83365.jpg">
+<meta property="article:published_time" content="2023-09-16T01:50:00.000Z">
+<meta property="article:modified_time" content="2023-09-16T02:00:16.062Z">
+<meta property="article:author" content="Dog">
+<meta property="article:tag" content="博客，dog，狗">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://p5.qhimg.com/t01699a03085db83365.jpg"><link rel="shortcut icon" href="https://www.petxg.com/uploads/200111/1-200111202052424.jpg"><link rel="canonical" href="https://anleyyds.github.io/2023/09/16/spring%E7%9B%B8%E5%85%B3/spring%E7%AF%87%E9%9D%A2%E8%AF%95%E9%A2%98/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"applicationID","apiKey":"apiKey","indexName":"...","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":360,"position":"top","messagePrev":"该文章创建于","messageNext":"天前，请以最新文章为准！"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":50},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Dog","link":"链接: ","source":"来源: Dog博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java面试题（spring全家桶）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-09-16 10:00:16'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/style.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="http:///p9.qhimg.com/t013cdf0c4dec117f66.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 连接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情连接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http:///p5.qhimg.com/t01699a03085db83365.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Dog博客"><span class="site-name">Dog博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 连接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情连接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Java面试题（spring全家桶）<a class="post-edit-link" href="https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/_posts/spring相关/spring篇面试题.md" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-16T01:50:00.000Z" title="发表于 2023-09-16 09:50:00">2023-09-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-16T02:00:16.062Z" title="更新于 2023-09-16 10:00:16">2023-09-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Java面试题（spring全家桶）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="1、单列Bean是单列模式吗？"><a href="#1、单列Bean是单列模式吗？" class="headerlink" title="1、单列Bean是单列模式吗？"></a>1、单列Bean是单列模式吗？</h2><img src="C:\Users\A'n'le\AppData\Roaming\Typora\typora-user-images\image-20230911094731646.png" alt="image-20230911094731646" style="zoom:80%;" />
+
+
+
+<p>通常来说，单例模式是在一个jvm中，一个类只能构造出来一个对象，有很多方法可以来实现单例模式，比如懒汉模式，但是我们通常讲的单例模式有一个前提条件是必须在一个jmv中。</p>
+<p>那如果要在两个jvm中保持一个单例模式呢？那可能就要用分布式锁这些技术了，这里的重点是我们在讨论单例模式时要考虑的范围。</p>
+<h2 id="2、Bean的实例化和Bean的初始化有什么区别？"><a href="#2、Bean的实例化和Bean的初始化有什么区别？" class="headerlink" title="2、Bean的实例化和Bean的初始化有什么区别？"></a>2、Bean的实例化和Bean的初始化有什么区别？</h2><p><img src="https://s2.loli.net/2023/09/11/w9JQmXcYuGKNU8y.png" alt="image-20230911095830034"></p>
+<p>spring在创建一个bean对象时，会创建出一个Java对象，会通过反射来执行类的构造方法从而得到一个Java对象，而这个过程就叫做bean的实例化。</p>
+<p>得到Java对象后，会进行依赖注入，依赖注入后就进行初始化了，而bean的初始化就是调用前面创建出来的Java对象中特定的方法，比如Java对象实现了initializingBean接口，那么初始化的时候就会执行Java对象的afterPropertiesSet（）方法，spring只会执行这个方法，并不会关心该方法做了是什么，我们可以在这个方法中去指定对谁进行验证，或者直接给某个属性赋值都是可以的，反正bean的初始化就是执行afterPropertiesSet（）方法，或者执行init-method指定的方法。</p>
+<h2 id="3、Spring-AOP-是任何实现的？它和AspectJ有什么区别？"><a href="#3、Spring-AOP-是任何实现的？它和AspectJ有什么区别？" class="headerlink" title="3、Spring AOP 是任何实现的？它和AspectJ有什么区别？"></a>3、Spring AOP 是任何实现的？它和AspectJ有什么区别？</h2><p><img src="https://s2.loli.net/2023/09/11/stnlB4LRqoMZrA6.png" alt="image-20230911101535425"></p>
+<p>spring AOP 是利用动态代理机制，如果一个bean实习了接口，那么就会采用动态代理的方式来生成接口的代理对象，那么就会采用CGLIB来生成当前类的一个代理对象，代理对象的作用就是代理原来的bean对象，代理对象在执行某个方法的时候，会在方法上增加一些切面的逻辑，使得我们可以通过AOP来实习一些诸多登入校验、权限设置、日志记录等一些功能。</p>
+<p>Sprintg AOP 与AspectJ之间并没有特变强的关系，AOP表示面向切面编程，这是一种思想，各个组织和人都可以通常技术来实习这种思想，AspectJ就是其中之一，它会在编译器来对类进行增强，所有要用AspectJ，用AspectJ开发的编译器来编译你的项目，而srping AOP 则是通过动态代理来实习aop，只是觉得AspectJ设计的那几个注解比较好用，比如@Before、@After等，同时也不给程序员带来困扰，所有spring AOP中会对这几个注解进行支持，虽然注解是相同的，但是底层支持和实现完全不一样。</p>
+<h2 id="4、spring-中的事务是如何实现的？"><a href="#4、spring-中的事务是如何实现的？" class="headerlink" title="4、spring 中的事务是如何实现的？"></a>4、spring 中的事务是如何实现的？</h2><ol>
+<li>spring事务底层基于数据库事务和AOP机制的</li>
+<li>首先对使用了@Transactional注解的bean。spring会创建一个代理对象作为bean</li>
+<li>当调用代理对象时，会判断该方法上是否有@Transactional注解</li>
+<li>如果加了那么就利用事务管理器创建一个数据库连接</li>
+<li>并且修改数据库连接的autocommit属性为false，禁止此连接自动提交，这是spring事务非常重要的一步</li>
+<li>然后执行当前方法，和执行sql</li>
+<li>执行当前方法后，如果没有出现异常就可以直接提交</li>
+<li>如果出现异常，并且这个异常需要回滚事务就回滚，否则仍然提交事务</li>
+<li>spring事务的隔离级别对应的就是数据库对应的隔离级别</li>
+<li>spring事务的传播机制是spring事务自己实现的，也是spring事务中最复杂的</li>
+<li>spring事务的传播机制是基于数据库连接来做的，一个数据库连接一个事务，如果传播机制配置为需要新开一个事务，那么实际上就是建立一个数据库连接，在此新数据库连接上执行sql</li>
+</ol>
+<h2 id="5、你是如何理解spring事务的传播机制的？底层是如何实现的？"><a href="#5、你是如何理解spring事务的传播机制的？底层是如何实现的？" class="headerlink" title="5、你是如何理解spring事务的传播机制的？底层是如何实现的？"></a>5、你是如何理解spring事务的传播机制的？底层是如何实现的？</h2><p><img src="C:\Users\A'n'le\AppData\Roaming\Typora\typora-user-images\image-20230911164716147.png" alt="image-20230911164716147"></p>
+<p>一个线程在运行过程中，可能连续调用好几个方法，在调用某一个方法时可以开启一个spring事务，那么在调用接下来的方法时，到底时共同一个事务呢？还是新开了一个事情呢？这是事务的传播机制，程序员可以根据不同的业务需求来进行配置，如下：</p>
+<ol>
+<li>REQUIRE（spring默认的事务传播类型）：如果当前没有事务，则新建一个事务，如果当前有事务，则加入这个事务</li>
+<li>SUPPORTS：当前存在事务，就加入该事务，如果不存在事务，那么就以非事务运行</li>
+<li>MANDATORY:  当前存在事务，就加入该事务，如果不存在事务，那么就抛出异常</li>
+<li>REQURES_NEW： 创建一个新事务，如果存在当前事务，则挂起该事务</li>
+<li>NOT_SUPPORTED:以非事务方式执行，如果当前存在事务，就挂起事务。</li>
+<li>NEVER:  不使用事务，如果当前事务存在，就抛出异常</li>
+<li>NESTEF:  如果当前存在事务，就嵌套在事务中执行，否则和REQUIRE的操作一样（开启一个事务）</li>
+</ol>
+<p>在spring中，一个spring事务对应就是一个数据库连接，新开一个事务就是新开一个数据库连接，比如执行某一个方法需要开启一个spring事务，那么就会创建一个新的数据库连接，然后开始执行方法，如果方法调用了其他方法，那么就要看其他方法是如何配置的：</p>
+<ol>
+<li>比如是REQURES_NEW：那么就会新开一个数据库连接，这个其中方法中的sql就会在这个新的数据库 连接中执行</li>
+<li>比如是REQUIRE，那么就不会断开，而是基于之前的数据库连接来执行方法中的sql</li>
+</ol>
+<h2 id="6、哪些情况下会导致spring事务失效，对应原因是什么？"><a href="#6、哪些情况下会导致spring事务失效，对应原因是什么？" class="headerlink" title="6、哪些情况下会导致spring事务失效，对应原因是什么？"></a>6、哪些情况下会导致spring事务失效，对应原因是什么？</h2><ol>
+<li>方法的自调用：spring事务是基于AOP的，只要使用代理对象调用某个方法时，spring事务才能生效，而在一个方法中调用this.xxx()方法时，this并不是代理对象，所有spring事务会失效。</li>
+</ol>
+<ul>
+<li>解决方法1：把调用方法拆分到另外的bean中</li>
+<li>解决方法2：自己调用自己</li>
+<li>解决方法3：AopContext.currentProxy()+@EnableAspectJAutoProxy(exposeProxy &#x3D;true)</li>
+</ul>
+<ol start="2">
+<li>方法是private的：spring事务基于CGLIB来进行AOP，而CGLIB会基于子类来失效，子类是代理类，父类是被代理类，如果父类的某个方法是private的，那么子类就没有办法重写它，也就没有办法额外增加sprng事务的逻辑。</li>
+<li>方法是final的：原因和private一样子类无法重写父类final修饰方法。</li>
+<li>单独线程调用方法，当Mybatis和jdbcTemplate执行SQL时，会从TheradLocal中去获取数据库连接对象，如果开启事务的线程和执行sql的线程是同一个，那么就能拿到数据库连接对象，如果不是同一个线程那么就拿不到数据库连接对象，这样Mybatis和jdbcTemplate就会创建一个新的数据库连接来执行sql，此数据库连接的autocommit为true，那么执行的sql就会提交，后序在抛异常就不能在回滚到之前以及提交的sql了。</li>
+<li>没有加@Configuration注解：如果用springboot基本没有这个问题，那么用spring那么就会出现这个问题，这个问题的原因其实也是Mybatis或jdbcTemplate会从TheradLocal中去获取数据库连接，但是TheradLocal中存储的是MAP，MAP的key为DataSource对象，value为连接对象，而我们没有在AppConfig上增加@Configuration注解的话，会导致MAP中的DataSource对象和Mybatis或jdbcTemplate的DataSource对象不相等，从而也拿不到数据库连接，导致自己其创建数据库连接了。</li>
+<li>异常被吃掉：如果spring没有捕获到异常，那么就不会进行回滚，默认spring捕获的异常是RuntimeException和Error。</li>
+<li>类没有被spring管理</li>
+<li>数据库不支持事务</li>
+</ol>
+<h2 id="7、spring中Bean创建的生命周期有哪些步骤"><a href="#7、spring中Bean创建的生命周期有哪些步骤" class="headerlink" title="7、spring中Bean创建的生命周期有哪些步骤"></a>7、spring中Bean创建的生命周期有哪些步骤</h2><p>spring中一个bean的创建步骤大概分为以下步骤：</p>
+<ol>
+<li>推断构造方法</li>
+<li>实例化</li>
+<li>填充属性，也就是依赖注入</li>
+<li>处理Aware回调</li>
+<li>初始化前处理@PostConstruct注解</li>
+<li>初始化，处理initializngBean接口</li>
+<li>初始化后进入AOP</li>
+</ol>
+<h2 id="8、spring中的Bean是线程安全的吗"><a href="#8、spring中的Bean是线程安全的吗" class="headerlink" title="8、spring中的Bean是线程安全的吗"></a>8、spring中的Bean是线程安全的吗</h2><p>spring本身没有针对bean做线程安全的处理，所以：</p>
+<ol>
+<li>如果Bean是无状态的，那么bean则是线程安全的</li>
+<li>如果Bean是有状态的，那么bean则是线程不安全的</li>
+</ol>
+<p>​	另外bean是不是线程安全，与bean的 作用域没有关系，bean的作用域只是表示bean的生命周期范围，对应任何生命周期的bean都是一个对象，这个对象是不是线程安全的，还是得看这个bean对象本身。</p>
+<h2 id="9、ApplicationContext和BeanFactory有什么区别？"><a href="#9、ApplicationContext和BeanFactory有什么区别？" class="headerlink" title="9、ApplicationContext和BeanFactory有什么区别？"></a>9、ApplicationContext和BeanFactory有什么区别？</h2><p>BeanFactory是spring中非常重要得组件，是bean的工厂，可以生成bean，维护bean，而ApplicationContext继承了BeanFactory，所以ApplicationContext拥有BeanFactory的所有特点，也是一个bean工厂，但是ApplicationContext除了继承BeanFactory以外还继承了很多接口，从而ApplicationContext还有获取环境变量、国际化、事件发布等功能，这是BeanFactory不具备的。</p>
+<h2 id="10、spring容器启动流程是怎么样的？"><a href="#10、spring容器启动流程是怎么样的？" class="headerlink" title="10、spring容器启动流程是怎么样的？"></a>10、spring容器启动流程是怎么样的？</h2><p>在创建spring容器，也就是启动spring时：</p>
+<ol>
+<li><p>首先会进行扫描，扫描得到所有的BeanDefinition对象，并存在一个Map中</p>
+</li>
+<li><p>然后筛选出非懒加载的BeanDefinition进行创建Bean，对于多列Bean不需要在启动过程中进行创建，对于多列bean会在每次获取bean时利用BeanDefinition进行创建</p>
+</li>
+<li><p>利用BeanDefinition创建的bean就是bean的生命周期，这其中包括了合并BeanDefinition、推断构造方法、实例化、属性填充、初始化前、初始化后等步骤，其中AOP就是放生在初始化后这一步骤中</p>
+</li>
+<li><p>单列bean创建完成之后，spring会发布一个 容器发布事件</p>
+</li>
+<li><p>spring启动结束</p>
+</li>
+<li><p>在源码中会更加复杂，比如源码中会提供一些模板方法，让子类来实现，比如源码中还会涉及到一些BeanFactoryPostPostProcessor和BeanPostPostProcessor的 注册，spring的扫描就是通过BeanPostPostProcessor来实现，依赖注入就是通过BeanPostPostProcessor来实现的。</p>
+</li>
+<li><p>在spring启动过程中还会处理@import等注解</p>
+</li>
+</ol>
+<p><img src="https://s2.loli.net/2023/09/12/oJLbjyVRDTzPIuW.png" alt="img"></p>
+<p>​        </p>
+<h2 id="11、-SpringBootApplication注解有什么作用？为什么一定要写它？"><a href="#11、-SpringBootApplication注解有什么作用？为什么一定要写它？" class="headerlink" title="11、@SpringBootApplication注解有什么作用？为什么一定要写它？"></a>11、@SpringBootApplication注解有什么作用？为什么一定要写它？</h2><p>@SpringBootApplication是一个复合注解：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootConfiguration</span></span><br><span class="line"><span class="meta">@EnableAutoConfiguration</span></span><br><span class="line"><span class="meta">@ComponentScan</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> SpringBootApplication &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>是以上三个注解的整合，在一个类上要加@SpringBootApplication注解，就相当于加了以上三个注解当springBootApplication，那么相当于在这个类上有：</p>
+<ol>
+<li>@ComponentScan，从而spring容器会进行扫描，扫描路径为当前在解析的这个类所在的包路径。</li>
+<li>@EnableAutoConfiguration，这个注解会辅助自动配置类的导入，也就是将项目中的自动配置类导入到spring容器中，从而得到解析</li>
+<li>@SpringBootConfiguration，它相当于@Configuration，表示当前类是一个配置类。</li>
+</ol>
+<p>所以，在使用springboot时，我们一般会加上@springBootApplication这个注解，因为只要加上它，springboot就会进行扫描，就会导入自动配置类并进行解析。</p>
+<h2 id="12、SpringBoot中的spring-factories文件"><a href="#12、SpringBoot中的spring-factories文件" class="headerlink" title="12、SpringBoot中的spring.factories文件"></a>12、SpringBoot中的spring.factories文件</h2><p>spring.factories是springboot  SPI机制实现的核心，SPI机制表示扩展机制，所以spring.factories文件的作用就是用来对springboot进行扩展的，比如我们可以通过在该文件中去添加@ApplicationListener、ApplicationContextinitializer、配置类等等、只需要在文件中增加就可以了，而不用额外的去写什么代码。</p>
+<p>springboot在启动过程中，会找出所有的spring.factories文件，包括jar中的spring.factories，从而向spring容器中增加各个spring.factories文件中指定的@ApplicationListener、ApplicationContextinitializer、配置类等组件，使得对springboot做扩展非常容易，只要引入一个jar包，这个jar中有spring.factories文件，就可以把ApplicationContextinitializer等增加到spring容器中。</p>
+<h2 id="13、你是如何理解springboot自动配置的？"><a href="#13、你是如何理解springboot自动配置的？" class="headerlink" title="13、你是如何理解springboot自动配置的？"></a>13、你是如何理解springboot自动配置的？</h2><p>在spring中，我们通常需要去配置很多bean：</p>
+<ul>
+<li>比如用Mybatis，我们需要配置SqSessionFactory的Bean对象</li>
+<li>用AOP，我们需要配置@EnableAspectJAspectJAutoProxy注解</li>
+<li>用spring事务，我们需要配置DataSourceTransactioManager的Bean对象</li>
+<li>用RabbitMQ，我们要配置RabbitTemplate的bean对象</li>
+<li>等等</li>
+</ul>
+<p>而我们在使用springboot时，我们基本不在配置这些了，因为springboot已经帮我们配置了，怎么做到的呢？其实就是springboot内置了很多的配置类，比如</p>
+<ol>
+<li>RabbitAutoConfiguration</li>
+<li>AopAutoConfiguration</li>
+<li>ElasticserchDataAutoConfigiguration</li>
+<li>DataSourceTransacionManagerAutoConfiguration</li>
+<li>等等</li>
+</ol>
+<p>内置的这些配置类，也可以叫自动配置类，我们在依赖了spring-boot-starter-web后，会接间的依赖到spring-boot-autoconfigure这个jar，这个jar中都包含了很多的自动配置类：</p>
+<img src="C:\Users\A'n'le\AppData\Roaming\Typora\typora-user-images\image-20230914101443630.png" alt="image-20230914101443630" style="zoom:80%;" />
+
+<p>这其实就是springboot自动配置，帮程序员配置了很多东西，bean或注解。</p>
+<h2 id="14、SpringBoot启动类中做了哪些事情？"><a href="#14、SpringBoot启动类中做了哪些事情？" class="headerlink" title="14、SpringBoot启动类中做了哪些事情？"></a>14、SpringBoot启动类中做了哪些事情？</h2><ol>
+<li>首先，判断当前的应用类型，比如不是web应用，如果是，那么servlet应用还是webflux应用，不同类型后序会创建不同类型spring容器</li>
+<li>根据引用类型创建spring容器</li>
+<li>解析启动类，从而进行扫描，导入自动配置类进行解析</li>
+<li>启动Tomcat或者jetty、undertow</li>
+<li>调用ApplicationRunner或者CommandLineRunner</li>
+</ol>
+<p>以上至少一些核心的，其实整个启动过程中还包含了SpringApplicationRunListeners的调用，banne打印，ApplicationContextinitializer的执行等，具体可以参照源码。</p>
+<h2 id="15、SpringMVC处理请求的流程是什么？"><a href="#15、SpringMVC处理请求的流程是什么？" class="headerlink" title="15、SpringMVC处理请求的流程是什么？"></a>15、SpringMVC处理请求的流程是什么？</h2><ol>
+<li>在启动Tomcat过程中，会创建DispatcherServler对象，并执行它的初始化容器</li>
+<li>初始化会创建spring容器（根据用户的spring配置）</li>
+<li>然后初始化过程中还会初始化HandlerMapping、HandlerAdapter等等</li>
+<li>SpringMVC中默认提供了好几个HandlerMapping，其中有一个为RequestMappingHandlerMapping</li>
+<li>RequestMappingHandlerMapping作用是寻找spring容器中哪些增加了@RequestMapping注解</li>
+<li>找到这些方法后就会解析该注解上的信息，包括指定的path，然后把path作为key，Method作为value存到一个Map中</li>
+<li>当DispatcherServler接受到请求后，RequestMappingHandlerMapping就会负责根据请求路径从map中找到对应的Method</li>
+<li>如何执行Method，只不过在执行Method之前，会解析该方法的各个参数</li>
+<li>比如参数前面加@RequestParam注解，哪SpringMvc就会解析该该注解，并从请求中来获取RequestParam中的数据传给该参数</li>
+<li>解析完各个参数，并从中拿到对应的值后，就会执行方法了。</li>
+<li>执行方法得到方法返回值后，SpringMVC会进一步解析</li>
+<li>比如方法上如果加上@RequestBody，那么就直接把返回值返回给浏览器</li>
+<li>比如方法上如果没有加上@RequestBody，那么要根据返回值找到对应的页面，并进行服务端渲染，再把渲染结果返回给浏览器</li>
+</ol>
+<p><strong>持续更新中………….</strong></p>
+<p><img src="http://p8.qhimg.com/t0179da5c3c2aa9e571.jpg"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://anleyyds.github.io">Dog</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://anleyyds.github.io/2023/09/16/spring%E7%9B%B8%E5%85%B3/spring%E7%AF%87%E9%9D%A2%E8%AF%95%E9%A2%98/">https://anleyyds.github.io/2023/09/16/spring%E7%9B%B8%E5%85%B3/spring%E7%AF%87%E9%9D%A2%E8%AF%95%E9%A2%98/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://anleyyds.github.io" target="_blank">Dog博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="http:///p5.qhimg.com/t01699a03085db83365.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/../img/wx.png" target="_blank"><img class="post-qr-code-img" src="/../img/wx.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/../img/zfb.jpg" target="_blank"><img class="post-qr-code-img" src="/../img/zfb.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/09/10/Java%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%88%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%89/" title="Java面试题（基础篇）"><img class="cover" src="http:///p4.qhimg.com/t016ab944ce31ada8b2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Java面试题（基础篇）</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81ODkyMi8zNTM4NA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="http:///p9.qhimg.com/t013cdf0c4dec117f66.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Dog</div><div class="author-info__description">Dog博客，欢迎大家访问</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/anleyyds"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/anleyyds" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1016033541@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://anleyyds.github.io/" target="_blank" title="博客"><i class="fa-sharp fa-regular fa-magnifying-glass fa-bounce" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%8D%95%E5%88%97Bean%E6%98%AF%E5%8D%95%E5%88%97%E6%A8%A1%E5%BC%8F%E5%90%97%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">1、单列Bean是单列模式吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81Bean%E7%9A%84%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%92%8CBean%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">2、Bean的实例化和Bean的初始化有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81Spring-AOP-%E6%98%AF%E4%BB%BB%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84%EF%BC%9F%E5%AE%83%E5%92%8CAspectJ%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">3、Spring AOP 是任何实现的？它和AspectJ有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81spring-%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">4、spring 中的事务是如何实现的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E4%BD%A0%E6%98%AF%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3spring%E4%BA%8B%E5%8A%A1%E7%9A%84%E4%BC%A0%E6%92%AD%E6%9C%BA%E5%88%B6%E7%9A%84%EF%BC%9F%E5%BA%95%E5%B1%82%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">5、你是如何理解spring事务的传播机制的？底层是如何实现的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E5%93%AA%E4%BA%9B%E6%83%85%E5%86%B5%E4%B8%8B%E4%BC%9A%E5%AF%BC%E8%87%B4spring%E4%BA%8B%E5%8A%A1%E5%A4%B1%E6%95%88%EF%BC%8C%E5%AF%B9%E5%BA%94%E5%8E%9F%E5%9B%A0%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">6.</span> <span class="toc-text">6、哪些情况下会导致spring事务失效，对应原因是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81spring%E4%B8%ADBean%E5%88%9B%E5%BB%BA%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%9C%89%E5%93%AA%E4%BA%9B%E6%AD%A5%E9%AA%A4"><span class="toc-number">7.</span> <span class="toc-text">7、spring中Bean创建的生命周期有哪些步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81spring%E4%B8%AD%E7%9A%84Bean%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%90%97"><span class="toc-number">8.</span> <span class="toc-text">8、spring中的Bean是线程安全的吗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81ApplicationContext%E5%92%8CBeanFactory%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">9.</span> <span class="toc-text">9、ApplicationContext和BeanFactory有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81spring%E5%AE%B9%E5%99%A8%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E6%98%AF%E6%80%8E%E4%B9%88%E6%A0%B7%E7%9A%84%EF%BC%9F"><span class="toc-number">10.</span> <span class="toc-text">10、spring容器启动流程是怎么样的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81-SpringBootApplication%E6%B3%A8%E8%A7%A3%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%80%E5%AE%9A%E8%A6%81%E5%86%99%E5%AE%83%EF%BC%9F"><span class="toc-number">11.</span> <span class="toc-text">11、@SpringBootApplication注解有什么作用？为什么一定要写它？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81SpringBoot%E4%B8%AD%E7%9A%84spring-factories%E6%96%87%E4%BB%B6"><span class="toc-number">12.</span> <span class="toc-text">12、SpringBoot中的spring.factories文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81%E4%BD%A0%E6%98%AF%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3springboot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E7%9A%84%EF%BC%9F"><span class="toc-number">13.</span> <span class="toc-text">13、你是如何理解springboot自动配置的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E3%80%81SpringBoot%E5%90%AF%E5%8A%A8%E7%B1%BB%E4%B8%AD%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E4%BA%8B%E6%83%85%EF%BC%9F"><span class="toc-number">14.</span> <span class="toc-text">14、SpringBoot启动类中做了哪些事情？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15%E3%80%81SpringMVC%E5%A4%84%E7%90%86%E8%AF%B7%E6%B1%82%E7%9A%84%E6%B5%81%E7%A8%8B%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">15.</span> <span class="toc-text">15、SpringMVC处理请求的流程是什么？</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/09/16/spring%E7%9B%B8%E5%85%B3/spring%E7%AF%87%E9%9D%A2%E8%AF%95%E9%A2%98/" title="Java面试题（spring全家桶）"><img src="http:///p5.qhimg.com/t01699a03085db83365.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java面试题（spring全家桶）"/></a><div class="content"><a class="title" href="/2023/09/16/spring%E7%9B%B8%E5%85%B3/spring%E7%AF%87%E9%9D%A2%E8%AF%95%E9%A2%98/" title="Java面试题（spring全家桶）">Java面试题（spring全家桶）</a><time datetime="2023-09-16T01:50:00.000Z" title="发表于 2023-09-16 09:50:00">2023-09-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/10/Java%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%88%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%89/" title="Java面试题（基础篇）"><img src="http:///p4.qhimg.com/t016ab944ce31ada8b2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java面试题（基础篇）"/></a><div class="content"><a class="title" href="/2023/09/10/Java%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%88%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%89/" title="Java面试题（基础篇）">Java面试题（基础篇）</a><time datetime="2023-09-10T02:41:00.000Z" title="发表于 2023-09-10 10:41:00">2023-09-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/01/springboot/SpringSecurity/" title="SpringSecurity的使用"><img src="http:///p8.qhimg.com/t01fe4a9f46cb589e42.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SpringSecurity的使用"/></a><div class="content"><a class="title" href="/2023/06/01/springboot/SpringSecurity/" title="SpringSecurity的使用">SpringSecurity的使用</a><time datetime="2023-06-01T02:50:00.000Z" title="发表于 2023-06-01 10:50:00">2023-06-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/05/26/mybatis-plus/" title="Mybatis-plus使用"><img src="http:///p4.qhimg.com/t0178fb7b485ab7e6ee.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mybatis-plus使用"/></a><div class="content"><a class="title" href="/2023/05/26/mybatis-plus/" title="Mybatis-plus使用">Mybatis-plus使用</a><time datetime="2023-05-26T14:50:00.000Z" title="发表于 2023-05-26 22:50:00">2023-05-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/05/26/springboot/SpringBoot%E4%B8%ADyaml%E8%AF%AD%E6%B3%95%E5%92%8CJSR303/" title="springboot中yaml语法和JSR303的使用"><img src="http:///p9.qhimg.com/t01f5212ba707fe7c2c.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="springboot中yaml语法和JSR303的使用"/></a><div class="content"><a class="title" href="/2023/05/26/springboot/SpringBoot%E4%B8%ADyaml%E8%AF%AD%E6%B3%95%E5%92%8CJSR303/" title="springboot中yaml语法和JSR303的使用">springboot中yaml语法和JSR303的使用</a><time datetime="2023-05-26T02:50:00.000Z" title="发表于 2023-05-26 10:50:00">2023-05-26</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('http:///p5.qhimg.com/t01699a03085db83365.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2023 By Dog</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">非常高兴认识大家，欢迎大家！</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="8444991407" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>
