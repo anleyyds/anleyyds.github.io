@@ -1,0 +1,586 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>java面试资料 | Dog博客</title><meta name="author" content="Dog"><meta name="copyright" content="Dog"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Java面试话术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java面试资料">
+<meta property="og:url" content="https://anleyyds.github.io/2023/10/31/Java%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E8%AF%9D%E6%9C%AF-%E6%95%B4%E5%90%88%E8%B5%84%E6%96%99/index.html">
+<meta property="og:site_name" content="Dog博客">
+<meta property="og:description" content="Java面试话术">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://p2.qhimg.com/t0178b6f9b8d0f98dbe.jpg">
+<meta property="article:published_time" content="2023-10-31T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-31T04:06:24.305Z">
+<meta property="article:author" content="Dog">
+<meta property="article:tag" content="博客，dog，狗">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://p2.qhimg.com/t0178b6f9b8d0f98dbe.jpg"><link rel="shortcut icon" href="https://www.petxg.com/uploads/200111/1-200111202052424.jpg"><link rel="canonical" href="https://anleyyds.github.io/2023/10/31/Java%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E8%AF%9D%E6%9C%AF-%E6%95%B4%E5%90%88%E8%B5%84%E6%96%99/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"applicationID","apiKey":"apiKey","indexName":"...","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":360,"position":"top","messagePrev":"该文章创建于","messageNext":"天前，请以最新文章为准！"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":50},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Dog","link":"链接: ","source":"来源: Dog博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'java面试资料',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-10-31 12:06:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/style.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="http:///p9.qhimg.com/t013cdf0c4dec117f66.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 连接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情连接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http:///p2.qhimg.com/t0178b6f9b8d0f98dbe.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Dog博客"><span class="site-name">Dog博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 连接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情连接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">java面试资料<a class="post-edit-link" href="https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/_posts/Java面试参考话术-整合资料.md" title="编辑" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-10-31T04:00:00.000Z" title="发表于 2023-10-31 12:00:00">2023-10-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-10-31T04:06:24.305Z" title="更新于 2023-10-31 12:06:24">2023-10-31</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">8.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>27分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="java面试资料"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一、自我介绍-3-5分钟"><a href="#一、自我介绍-3-5分钟" class="headerlink" title="一、自我介绍(3-5分钟)"></a>一、自我介绍(3-5分钟)</h1><p><strong>基本信息</strong>：姓名、年龄、籍贯、毕业院校、应聘什么岗位、曾经主要工作经历和时间节点</p>
+<p><strong>个人优势</strong>：做成过什么工作、擅长什么技术、学习提高的经历（有助于工作岗位的）</p>
+<p><strong>其他</strong>：爱好，性格，结束语&amp;感谢</p>
+<p><strong>注意：</strong></p>
+<ol>
+<li><p>考察面试者口述自我介绍的内容和简历中的基本情况是否相冲突?以此来判断简历的真实性。</p>
+</li>
+<li><p>考察面试者基本的逻辑思维能力、语言表达能力，总结概括能力。</p>
+</li>
+<li><p>考察面试者是否聚焦，以及现场的感知能力与把控能力。</p>
+</li>
+<li><p>学历不具备优势的在自我介绍中不建议着重体现，一带而过即可。</p>
+</li>
+</ol>
+<p><strong>自我介绍参考：</strong></p>
+<p>您好，我是来面试咱们公司java高级工程师的，我叫XXX。我从事java行业已经两年多了。曾近做过三个项目，最近做的是宝亮网智的服务管理系统 和 心连心社交平台等。在这几年的项目开发中，我掌握了并发、微服务、多线程等技术的应用，以及我能够熟练使用Oracle,MySQL等关系型数据库以及现在比较获得NoSQL（ MongoDB）非关系型数据库。我还掌握了一些有关于项目中的优化问题，如：缓存，SQL优化，性能优化，业务优化，Tomcat调优，负载均衡等。</p>
+<h1 id="二、人事话术"><a href="#二、人事话术" class="headerlink" title="二、人事话术"></a><strong>二、人事话术</strong></h1><h2 id="1、为什么离职？"><a href="#1、为什么离职？" class="headerlink" title="1、为什么离职？"></a>1、为什么离职？</h2><p><strong>解析：</strong></p>
+<p>【个人原因】正面 ： 家里有事导致、离开企业所在城市 、挑战自我。</p>
+<p>回答范例1：是想要来北京寻找更好的发展，提升自己的技术，寻找更好的平台。之前在天津上学，毕业后就留在那边啦，但是后来发现天津跟北京的区别还是很大的，之前就是过的比较安逸，工作上也很难有很大的突破，所以就想重新寻找更大一点的平台，跳槽来北京发展了。</p>
+<p>回答范例2：家里近期有一些事情需要处理，之前已经请假去处理了几天，但是未处理完毕，后期请假时间不确定，有可能时间会比较久，也担心时间太久会影响公司的项目进度，毕竟公司编制也是比较有限的，综合跟项目经理商量了一下最终决定离职，但是目前已经处理完毕，所以重新找工作。</p>
+<p>【公司原因】正面 ：部门&#x2F;公司架构调整（公司地点变化）。</p>
+<p>回答范例：我离职是因为这家公司经营不善，我在公司工作了2、3年，有较深的感情，从去年始，由于市场形势突变，公司的局面急转直下，到眼下这一步我觉得很遗憾，但还要面对现实，重新寻找能发挥我能力的舞台。</p>
+<p> 【反面原因】：避免说以前的公司没有发展空间、跟同事关系处不好发生矛盾，工作中受委屈或者对公司有很多怨言.</p>
+<h2 id="2、如何谈薪资？"><a href="#2、如何谈薪资？" class="headerlink" title="2、如何谈薪资？"></a>2、如何谈薪资？</h2><p><strong>解析：</strong></p>
+<p>-薪资定位：预期薪资涨幅30%（相对于上一家），是一个数值而不是范围。</p>
+<p>-压薪资时候，询问福利待遇（五险一金、年终奖、试用期是否有打折），不轻易降薪。</p>
+<p>例如：A公司  12k  福利500元， 公积金300元；总计：12.8k</p>
+<p>   B公司  10k  福利1200元，公积金2000元；总计：13.2k</p>
+<p>-考虑企业业务领域，实际面试情况，公司具体情况</p>
+<p> 例如：金融，电商，医疗行业相对工资会高一点</p>
+<p>​      公司装修环境，地理位置，整体感受也可以衡量</p>
+<p>​      公司技术平台也是很重要的考核项，一个好的平台很重要</p>
+<p>​      公司的项目选型和技术栈跟自己是否匹配</p>
+<p>-如何收尾？切记一定要把offer要过来</p>
+<p>例如：面试成功达到预期，那没什么问题的话可以把offer发我邮箱吗？我之后准备一下入职资料，尽量早点来入职。</p>
+<p>例如：面试没有达到预期，那如果我表现的好，进入公司之后可以给我加薪吗？（面试官肯定回答可以），然后接着说：“那我觉得是金子到哪里都会发光的，进入公司之后我一定会好好干，咱们公司xx地方我觉得我很满意，我也很想加入贵公司，那看什么时间方便，给我下一下offer，我来办理入职呢？</p>
+<p>所有的都等拿到offer之后在考虑入职与否，offer在手，再考虑。</p>
+<h2 id="3、如何看待加班？（理解，提高工作效率）"><a href="#3、如何看待加班？（理解，提高工作效率）" class="headerlink" title="3、如何看待加班？（理解，提高工作效率）"></a>3、如何看待加班？（理解，提高工作效率）</h2><p><strong>解析:</strong></p>
+<p>实际上好多公司问这个问题，并不证明一定要加班，只是想测试你是否愿意为公司奉献。</p>
+<p>回答范例：我做咱们IT这个行业也好几年了，有时候赶项目或者项目上线会涉及加班，这个都能理解，工作需要我会义不容辞加班，我现在也单身，可以全身心的投入工作。但我也会提高工作效率，推进项目周期进度，减少不必要的加班。</p>
+<h2 id="4、在之前的工作中最有意义的事情是什么？"><a href="#4、在之前的工作中最有意义的事情是什么？" class="headerlink" title="4、在之前的工作中最有意义的事情是什么？"></a>4、在之前的工作中最有意义的事情是什么？</h2><p><strong>解析：</strong></p>
+<p>一般平时会很难记录住这些事情，如何从记忆里面把这些事找出来</p>
+<p>让你痛苦不已的，让你感激涕零的，让你欣喜若狂的这些形容词的背后有没有你对应的事呢？</p>
+<p>例如：</p>
+<p>1、你干的项目，干了三四个月了终于有一天上线了，你会不会很开心啊？</p>
+<p>2、你碰到一个bug或者一个问题，让你彻夜难眠，这个也算，你从中又学到了什么呢？</p>
+<p>3、在你的团队沟通过程中有几件事情是不是让你非常有启发呀，之前没有遇到过，通过跟你团队或者你老大的沟通你会发现原来也可以这样，也会让你觉得很受用</p>
+<h2 id="5、为何转行来计算机专业？"><a href="#5、为何转行来计算机专业？" class="headerlink" title="5、为何转行来计算机专业？"></a>5、为何转行来计算机专业？</h2><p><strong>解析：</strong></p>
+<p>-重点并不在于你没有选择原来的专业并从事相关工作，而在于你选择了跨行业到计算机行业来能不能很专业。</p>
+<p>第一，你要表达出你对这个行业的认知。</p>
+<p>第二，你要表达出你对这个行业是如何做到相应的专业的，首先要说出来这个行业的基本特点（这也是你为什么选择这个行业的原因）。</p>
+<p>-例如：人才缺口大，发展空间广阔一些，待遇还不错，最重要的是你对技术本身很感兴趣。</p>
+<p>进入这个行业我如何让自己变得专业呢？一是因为我的兴趣，第二呢在这个行业当中正好也有我的朋友，我在学习技术的过程当中朋友也给予了很多技术以及经验上的支持，让我的技术得以快速的提升，让我有了从事本行业的一个资本，同时未来呢，我也希望我能在这个行业走的更长更远，我也希望我的能力能给咱们的公司或者团队带来更多的价值。</p>
+<h1 id="三、知识点"><a href="#三、知识点" class="headerlink" title="三、知识点"></a>三、知识点</h1><h2 id="1、ThreadLocal-的原理（高薪常问）"><a href="#1、ThreadLocal-的原理（高薪常问）" class="headerlink" title="1、ThreadLocal 的原理（高薪常问）"></a>1、ThreadLocal 的原理（高薪常问）</h2><p>ThreadLocal：为共享变量在每个线程中创建一个副本，每个线程都可以访问自己 </p>
+<p>内部的副本变量。通过 threadlocal 保证线程的安全性。 </p>
+<p>其实在 ThreadLocal 类中有一个静态内部类 ThreadLocalMap(其类似于 Map)， </p>
+<p>用键值对的形式存储每一个线程的变量副本，ThreadLocalMap 中元素的 key 为当前 </p>
+<p>ThreadLocal 对象，而 value 对应线程的变量副本。 </p>
+<p>ThreadLocal 本身并不存储值，它只是作为一个 key 保存到 ThreadLocalMap 中，但是这里要注意的是它作为一个 key 用的是弱引用，因为没有强引用链，弱引用在 GC 的时候可能会被回收。这样就会在 ThreadLocalMap 中存在一些 key 为 null 的键值对 (Entry）。因为 key 变成 null 了，我们是没法访问这些 Entry 的，但是这些 Entry 本身是 不会被清除的。如果没有手动删除对应 key 就会导致这块内存即不会回收也无法访问，也 就是内存泄漏。 使用完 ThreadLocal 之后，记得调用 remove 方法。 在不使用线程池的前提下， 即使不调用 remove 方法，线程的”变量副本”也会被 gc 回收，即不会造成内存泄漏的情况。</p>
+<h2 id="2、同步锁、死锁、乐观锁、悲观锁-（高薪常问）"><a href="#2、同步锁、死锁、乐观锁、悲观锁-（高薪常问）" class="headerlink" title="2、同步锁、死锁、乐观锁、悲观锁 （高薪常问）"></a>2、同步锁、死锁、乐观锁、悲观锁 （高薪常问）</h2><p><strong>同步锁：</strong></p>
+<p>当多个线程同时访问同一个数据时，很容易出现问题。为了避免这种情况出现，我们要 保证线程同步互斥，就是指并发执行的多个线程，在同一时间内只允许一个线程访问共享数据。Java 中可以使用 synchronized 关键字来取得一个对象的同步锁。 </p>
+<p>8<strong>死锁：</strong></p>
+<p>何为死锁，就是多个线程同时被阻塞，它们中的一个或者全部都在等待某个资源被释放。 </p>
+<p><strong>乐观锁：</strong></p>
+<p>总是假设最好的情况，每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是 在更新的时候会判断一下在此期间别人有没有去更新这个数据，可以使用版本号机制和 CAS 算法实现。乐观锁适用于多读的应用类型，这样可以提高吞吐量，像数据库提供的类 似于 write_conditio 机制，其实都是提供的乐观锁。在 Java 中 java.util.concurrent.atomic 包下面的原子变量类就是使用了乐观锁的一种实现方式 CAS 实现的。 </p>
+<p><strong>悲观锁：</strong></p>
+<p>总是假设最坏的情况，每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时 候都会上锁，这样别人想拿这个数据就会阻塞直到它拿到锁（共享资源每次只给一个线程使 用，其它线程阻塞，用完后再把资源转让给其它线程）。传统的关系型数据库里边就用到了 很多这种锁机制，比如行锁，表锁等，读锁，写锁等，都是在做操作之前先上锁。Java 中 synchronized 和 ReentrantLock 等独占锁就是悲观锁思想的实现。 </p>
+<h2 id="3、反射"><a href="#3、反射" class="headerlink" title="3、反射"></a>3、反射</h2><p>在 Java 中的反射机制是指在运行状态中，对于任意一个类都能够知道这个类所有 </p>
+<p>的 属性和方法；并且对于任意一个对象，都能够调用它的任意一个方法；这种动态获 取信息 以及动态调用对象方法的功能成为 Java 语言的反射机制。 获取 Class 对象的 3 种方法 ： 调用某个对象的 getClass()方法 Person p&#x3D;new Person(); Classclazz&#x3D;p.getClass(); 调用某个类的 class 属性来获取该类对应的 Class 对象 Class clazz&#x3D;Person.class; 使用 Class 类中的 forName()静态方法(最安全&#x2F;性能最好) Class clazz&#x3D;Class.forName(“类的全路径”); (最常用) </p>
+<h2 id="4、Hashmap-和-hashtable-ConcurrentHashMap-区别（高薪常问）"><a href="#4、Hashmap-和-hashtable-ConcurrentHashMap-区别（高薪常问）" class="headerlink" title="4、Hashmap 和 hashtable ConcurrentHashMap 区别（高薪常问）"></a>4、Hashmap 和 hashtable ConcurrentHashMap 区别（高薪常问）</h2><p><strong>区别对比一(HashMap 和 HashTable 区别)：</strong></p>
+<p>1、HashMap 是非线程安全的，HashTable 是线程安全的。 </p>
+<p>2、HashMap 的键和值都允许有 null 值存在，而 HashTable 则不行。 </p>
+<p>3、因为线程安全的问题，HashMap 效率比 HashTable 的要高。 </p>
+<p>4、Hashtable 是同步的，而 HashMap 不是。因此，HashMap 更适合于单线 </p>
+<p>程环境，而 Hashtable 适合于多线程环境。一般现在不建议用 HashTable, ① </p>
+<p>是 HashTable 是遗留类，内部实现很多没优化和冗余。②即使在多线程环境下， </p>
+<p>现在也有同步的 ConcurrentHashMap 替代，没有必要因为是多线程而用 </p>
+<p>HashTable。 </p>
+<p><em><strong>*区别对比二(HashTable 和 ConcurrentHashMap 区别)：*</strong></em> </p>
+<p>HashTable 使用的是 Synchronized 关键字修饰，ConcurrentHashMap 是 </p>
+<p>JDK1.7 使用了锁分段技术来保证线程安全的。JDK1.8ConcurrentHashMap 取消了 </p>
+<p>Segment 分段锁，采用 CAS 和 synchronized 来保证并发安全。数据结构跟 HashMap1.8 </p>
+<p>的结构类似，数组+链表&#x2F;红黑二叉树。 </p>
+<p>synchronized 只锁定当前链表或红黑二叉树的首节点，这样只要 hash 不冲突，就 </p>
+<p>不会产生并发，效率又提升 N 倍。 </p>
+<h2 id="5、线程池的分类（高薪常问）"><a href="#5、线程池的分类（高薪常问）" class="headerlink" title="5、线程池的分类（高薪常问）"></a>5、线程池的分类（高薪常问）</h2><p>1. </p>
+<p>****newCachedThreadPool：****创建一个可进行缓存重复利用的线程池 </p>
+<p>2. </p>
+<p>****newFixedThreadPool：****创建一个可重用固定线程数的线程池，以共享的无 </p>
+<p>界队列方式来运行这些线程，线程池中的线程处于一定的量，可以很好的控制线程的并发量 </p>
+<p>3. </p>
+<p><em><strong>*newSingleThreadExecutor ：*</strong></em> 创 建 一 个 使 用 单 个 worker 线 程 的 </p>
+<p>Executor ，以无界队列方式来运行该线程。线程池中最多执行一个线程，之后提交的线程 </p>
+<p>将会排在队列中以此执行 </p>
+<p><strong>4.</strong> </p>
+<p><strong>newSingleThreadScheduledExecutor：</strong>创建一个单线程执行程序，它可 </p>
+<p>安排在给定延迟后运行命令或者定期执行 </p>
+<p><strong>5.</strong></p>
+<p><strong>newScheduledThreadPool：</strong>创建一个线程池，它可安排在给定延迟后运行 </p>
+<p>命令或者定期的执行 </p>
+<p><strong>6.</strong></p>
+<p><strong>newWorkStealingPool</strong>：创建一个带并行级别的线程池，并行级别决定了 </p>
+<p>同一时刻最多有多少个线程在执行，如不传并行级别参数，将默认为当前系统的 CPU 个数</p>
+<h2 id="6、JDK1-8-堆内存结构（高薪常问）"><a href="#6、JDK1-8-堆内存结构（高薪常问）" class="headerlink" title="6、JDK1.8 堆内存结构（高薪常问）"></a>6、JDK1.8 堆内存结构（高薪常问）</h2><p><strong>Young 年轻区（代）: Eden+S0+S1, S0 和 S1 大小相等, 新创建的对象都在年轻代</strong></p>
+<p><strong>Tenured 年老区: 经过年轻代多次垃圾回收存活下来的对象存在年老代中.</strong> </p>
+<p>Jdk1.7 和 Jdk1.8 的区别在于, 1.8 将永久代中的对象放到了元数据区, 不存永久代这一区 域了. </p>
+<h2 id="7、Hashmap-的底层原理"><a href="#7、Hashmap-的底层原理" class="headerlink" title="7、Hashmap 的底层原理"></a>7、Hashmap 的底层原理</h2><p>HashMap 在 JDK1.8 之前的实现方式 <em><strong>*数组+链表,*</strong></em> </p>
+<p>但是在 JDK1.8 后对 HashMap 进行了底层优化,改为了由 <em><strong>*数组+链表或者数值+红黑树*</strong></em> </p>
+<p>实现,主要的目的是提高查找效率 </p>
+<ol>
+<li><strong>Jdk8 数组+链表或者数组+红黑树</strong>实现，当链表中的元素超过了 8 个以后， 会</li>
+</ol>
+<p>将链表转换为红黑树，当红黑树节点 小于 等于 6 时又会退化为链表。 </p>
+<ol start="2">
+<li>当 new HashMap():底层没有创建数组，首次调用 put()方法示时，底层创建长度</li>
+</ol>
+<p>为 16 的数组，</p>
+<p>jdk8 底层的数组是：Node[],而非 Entry[]，用数组容量大小乘以加载因子得 </p>
+<p>到一个值，一旦数组中存储的元素个数超过该值就会调用 rehash 方法将数组容量增加到原 </p>
+<p>来的两倍，专业术语叫做扩容，在做扩容的时候会生成一个新的数组，原来的所有数据需要 </p>
+<p>重新计算哈希码值重新分配到新的数组，所以扩容的操作非常消耗性能. </p>
+<p>默认的负载因子大小为 0.75，数组大小为 16。也就是说，默认情况下，那么当 HashMap </p>
+<p>中元素个数超过 16<em>0.75&#x3D;12 的时候，就把数组的大小扩展为 2</em>16&#x3D;32，即扩大一倍。 </p>
+<ol start="3">
+<li>在我们 Java 中任何对象都有 hashcode，hash 算法就是通过 hashcode 与自己进</li>
+</ol>
+<p>行向右位移 16 的异或运算。这样做是为了计算出来的 hash 值足够随机，足够分散，还有 产生的数组下标足够随机， <strong>map.put(k,v)实现原理</strong> </p>
+<p>（1）首先将 k,v 封装到 Node 对象当中（节点）。 </p>
+<p>（2）先调用 k 的 hashCode()方法得出哈希值，并通过哈希算法转换成数组的下标。 </p>
+<p>（3）下标位置上如果没有任何元素，就把 Node 添加到这个位置上。如果说下标对应的位 置上有链表。此时，就会拿着 k 和链表上每个节点的 k 进行 equal。如果所有的 equals 方 法返回都是 false，那么这个新的节点将被添加到链表的末尾。如其中有一个 equals 返回了 true，那么这个节点的 value 将会被覆盖。 </p>
+<p><strong>map.get(k)实现原理</strong> </p>
+<p>(1)、先调用 k 的 hashCode()方法得出哈希值，并通过哈希算法转换成数组的下标。 </p>
+<p>(2)、在通过数组下标快速定位到某个位置上。重点理解如果这个位置上什么都没有，则返回 null。如果这个位置上有单向链表，那么它就会拿着参数 K 和单向链表上的每一个节点 的 K 进行 equals，如果所有 equals 方法都返回 false，则 get 方法返回 null。如果其中一 个节点的 K 和参数 K 进行 equals 返回 true，那么此时该节点的 value 就是我们要找的 value 了，get 方法最终返回这个要找的 value。 </p>
+<ol start="4">
+<li><strong>Hash 冲突</strong></li>
+</ol>
+<p>不同的对象算出来的数组下标是相同的这样就会产生 hash 冲突，当单线链表达到一定长度 后效率会非常低。 </p>
+<ol start="5">
+<li>在链表长度大于 8 的时候，将链表就会变成红黑树，提高查询的效率。</li>
+</ol>
+<h2 id="8、存储引擎"><a href="#8、存储引擎" class="headerlink" title="8、存储引擎"></a>8、存储引擎</h2><p><strong>1.MyISAM 存储引擎</strong> </p>
+<p>主要特点： </p>
+<p>MySQL5.5 版本之前的默认存储引擎 </p>
+<p>支持表级锁（表级锁是 MySQL 中锁定粒度最大的一种锁，表示对当前操作的整张表加锁）； 不支持事务，外键。 </p>
+<p>适用场景：对事务的完整性没有要求，或以 select、insert 为主的应用基本都可以选用 MYISAM。在 Web、数据仓库中应用广泛。 </p>
+<p>特点： </p>
+<p>1、不支持事务、外键 </p>
+<p>2、每个 myisam 在磁盘上存储为 3 个文件，文件名和表名相同，扩展名分别是 .frm </p>
+<p>——-存储表定义 .MYD ——–MYData，存储数据 .MYI ——–MYIndex，存储索引 </p>
+<p><strong>2.InnoDB 存储引擎</strong>* </p>
+<p>主要特点： </p>
+<p>MySQL5.5 版本之后的默认存储引擎； </p>
+<p>支持事务； </p>
+<p>支持行级锁（行级锁是 Mysql 中锁定粒度最细的一种锁，表示只针对当前操作的行进行加 锁）； </p>
+<p>支持聚集索引方式存储数据。</p>
+<h2 id="9、如何避免索引失效"><a href="#9、如何避免索引失效" class="headerlink" title="9、如何避免索引失效"></a>9、如何避免索引失效</h2><p><strong>(1) 范围查询, 右边的列不能使用索引, 否则右边的索引也会失效.</strong> </p>
+<p>索引生效案例 </p>
+<p>select * from tb_seller where name &#x3D; “小米科技” and status &#x3D; “1” and address &#x3D; “北 </p>
+<p>京市”; </p>
+<p>select * from tb_seller where name &#x3D; “小米科技” and status &gt;&#x3D; “1” and address &#x3D; “ </p>
+<p>北京市”; </p>
+<p>索引失效案例 </p>
+<p>select * from tb_seller where name &#x3D; “小米科技” and status &gt; “1” and address &#x3D; “北 </p>
+<p>京市”; </p>
+<p>address 索引失效, 因为 status 是大于号, 范围查询. </p>
+<p><strong>(2) 不要在索引上使用运算, 否则索引也会失效.</strong> </p>
+<p>比如在索引上使用切割函数, 就会使索引失效. </p>
+<p>select * from tb_seller where substring(name, 3, 2) &#x3D; “科技”; </p>
+<p><strong>(3) 字符串不加引号, 造成索引失效.</strong></p>
+<p>如果索引列是字符串类型的整数, 条件查询的时候不加引号会造成索引失效. Mysql 内置的 优化会有隐式转换. </p>
+<p><strong>索引失效案例</strong> </p>
+<p>select * from tb_seller where name &#x3D; “小米科技” and status &#x3D; 1 </p>
+<p><strong>(4) 尽量使用覆盖索引, 避免 select *, 这样能提高查询效率.</strong> </p>
+<p>如果索引列完全包含查询列, 那么查询的时候把要查的列写出来, 不使用 select * </p>
+<p>select sellerid, name, status from tb_seller where name &#x3D; “小米科技” and staus &#x3D; “1” </p>
+<p>and address &#x3D; “西安市”; </p>
+<p><strong>(5) or 关键字连接</strong> </p>
+<p>用 or 分割开的条件, 如果 or 前面的列有索引, or 后面的列没有索引, 那么查询的时 </p>
+<p>候前后索引都会失效 如果一定要用 or 查询, 可以考虑下 or 连接的条件列都加索引, 这样就不会失效了.</p>
+<h2 id="10、SQL-语句调优"><a href="#10、SQL-语句调优" class="headerlink" title="10、SQL 语句调优"></a>10、SQL 语句调优</h2><p>根据业务场景建立复合索引只查询业务需要的字段，如果这些字段被索引覆盖，将极 大的提高查询效率. 多表连接的字段上需要建立索引，这样可以极大提高表连接的效率. where 条件字段上需要建立索引, 但 Where 条件上不要使用运算函数，以免索引失效. 排序字段上, 因为排序效率低, 添加索引能提高查询效率. </p>
+<p>优化 insert 语句: 批量列插入数据要比单个列插入数据效率高. </p>
+<p>优化 order by 语句: 在使用 order by 语句时, 不要使用 select *, select 后面要查有 </p>
+<p>索引的列, 如果一条 sql 语句中对多个列进行排序, 在业务允许情况下, 尽量同时用升 </p>
+<p>序或同时用降序. </p>
+<p>优化 group by 语句: 在我们对某一个字段进行分组的时候, Mysql 默认就进行了排序, 但是排序并不是我们业务所需的, 额外的排序会降低效率. 所以在用的时候可以禁止 排序, 使用 order by null 禁用. </p>
+<p>select age, count(*) from emp group by age order by null 尽量避免子查询, 可以将子查询优化为 join 多表连接查询</p>
+<h2 id="11、Spring-的事务传播行为"><a href="#11、Spring-的事务传播行为" class="headerlink" title="11、Spring 的事务传播行为"></a>11、Spring 的事务传播行为</h2><p>spring 事务的传播行为说的是，当多个事务同时存在的时候，spring 如何处理这些事 </p>
+<p>务的行为。 </p>
+<p><strong>备注(方便记忆): propagation 传播</strong> </p>
+<p><strong>require 必须的&#x2F;suppor 支持&#x2F;mandatory 强制托管&#x2F;requires-new 需要新建&#x2F;</strong> </p>
+<p><strong>not -supported 不支持&#x2F;never 从不&#x2F;nested 嵌套的</strong> </p>
+<p>① PROPAGATION_REQUIRED：如果当前没有事务，就创建一个新事务，如果当前 </p>
+<p>存在事务，就加入该事务，该设置是最常用的设置。 </p>
+<p>② PROPAGATION_SUPPORTS：支持当前事务，如果当前存在事务，就加入该事务， 如果当前不存在事务，就以非事务执行。 </p>
+<p>③ PROPAGATION_MANDATORY：支持当前事务，如果当前存在事务，就加入该事 </p>
+<p>务，如果当前不存在事务，就抛出异常。 </p>
+<p>④ PROPAGATION_REQUIRES_NEW：创建新事务，无论当前存不存在事务，都创建 </p>
+<p>新事务。</p>
+<p>⑤ PROPAGATION_NOT_SUPPORTED：以非事务方式执行操作，如果当前存在事务， 就把当前事务挂起。 </p>
+<p>⑥ PROPAGATION_NEVER：以非事务方式执行，如果当前存在事务，则抛出异常。 </p>
+<p>⑦ PROPAGATION_NESTED：如果当前存在事务，则在嵌套事务内执行。如果当前 </p>
+<p>没有事务，则按 REQUIRED 属性执行。 </p>
+<h2 id="12、-RocketMQ-如何保证消息不丢失"><a href="#12、-RocketMQ-如何保证消息不丢失" class="headerlink" title="12、 RocketMQ 如何保证消息不丢失"></a>12、 RocketMQ 如何保证消息不丢失</h2><p>首先在如下三个部分都可能会出现丢失消息的情况： </p>
+<p>Producer 端 </p>
+<p>Broker 端 </p>
+<p>Consumer 端 </p>
+<p><strong>12.1、Producer 端如何保证消息不丢失</strong> </p>
+<p>采取 send()同步发消息，发送结果是同步感知的。 </p>
+<p>发送失败后可以重试，设置重试次数。默认 3 次。 </p>
+<p>producer.setRetryTimesWhenSendFailed(10); </p>
+<p>集群部署，比如发送失败了的原因可能是当前 Broker 宕机了，重试的时候会发送 </p>
+<p>到其他 Broker 上。 </p>
+<p><strong>12.2、Broker 端如何保证消息不丢失</strong> </p>
+<p>修改刷盘策略为同步刷盘。默认情况下是异步刷盘的。 </p>
+<p>flushDiskType &#x3D; SYNC_FLUSH </p>
+<p>集群部署，主从模式，高可用。 </p>
+<p><strong>12.3 Consumer 端如何保证消息不丢失</strong> </p>
+<p>完全消费正常后在进行手动 ack 确认。</p>
+<h2 id="13、redis-的持久化"><a href="#13、redis-的持久化" class="headerlink" title="13、redis 的持久化"></a>13、redis 的持久化</h2><p>Redis 提供了两种持久化的方式，分别是 RDB（Redis DataBase）和 AOF（</p>
+<p>Append Only File）。 </p>
+<p>RDB，简而言之，就是在不同的时间点，将 redis 存储的数据生成快照并存储到磁盘 </p>
+<p>等介质上。 </p>
+<p>AOF，则是换了一个角度来实现持久化，那就是将 redis 执行过的所有写指令记录下 </p>
+<p>来，在下次 redis 重新启动时，只要把这些写指令从前到后再重复执行一遍，就可以实现 数据恢复了。 </p>
+<p>RDB 和 AOF 两种方式也可以同时使用，在这种情况下，如果 redis 重启的话，则会 </p>
+<p>优先采用 AOF 方式来进行数据恢复，这是因为 AOF 方式的数据恢复完整度更高。</p>
+<h2 id="14、SpringCloud-有哪些核心组件"><a href="#14、SpringCloud-有哪些核心组件" class="headerlink" title="14、SpringCloud 有哪些核心组件?"></a>14、SpringCloud 有哪些核心组件?</h2><p>l Eureka: 注册中心, 服务注册和发现 </p>
+<p>l Ribbon: 负载均衡, 实现服务调用的负载均衡 </p>
+<p>l Hystrix: 熔断器 </p>
+<p>l Feign: 远程调用 </p>
+<p>l Gateway: 网关 </p>
+<p>l Spring Cloud Config: 配置中心</p>
+<h2 id="15、SpringBoot-常用注解"><a href="#15、SpringBoot-常用注解" class="headerlink" title="15、SpringBoot 常用注解"></a>15、SpringBoot 常用注解</h2><p>@SpringBootApplication: 它 封 装 了 核 心 的 @SpringBootConfiguration </p>
+<p>+@EnableAutoConfiguration +@ComponentScan 这三个类,大大节省了程序员配 </p>
+<p>置时间,这就是 SpringBoot 的核心设计思想. </p>
+<p>@EnableScheduling 是通过@Import 将 Spring 调度框架相关的 bean 定义都加载到 </p>
+<p>IoC 容器 </p>
+<p>@MapperScan:spring-boot支持mybatis组件的一个注解，通过此注解指定mybatis </p>
+<p>接口类的路径，即可完成对 mybatis 接口的扫描 </p>
+<p>@RestController 是 @Controller 和 @ResponseBody 的 结 合 , 一 个 类 被 加 上 </p>
+<p>@RestController 注解,数据接口中就不再需要添加@ResponseBody,更加简洁。 </p>
+<p>@RequestMapping,我们都需要明确请求的路径. </p>
+<p>@GetMappping,@PostMapping, @PutMapping, @DeleteMapping 结 合 @RequestMapping 使用, 是 Rest 风格的, 指定更明确的子路径. </p>
+<p>@PathVariable：路径变量注解，用{}来定义 url 部分的变量名. </p>
+<p>@Service 这个注解用来标记业务层的组件，我们会将业务逻辑处理的类都会加上这个 注解交给 spring 容器。事务的切面也会配置在这一层。当让 这个注解不是一定要用。 有个泛指组件的注解，当我们不能确定具体作用的时候 可以用泛指组件的注解托付给 </p>
+<p>spring 容器 </p>
+<p>l @Component 和 spring 的注解功能一样, 注入到 IOC 容器中. </p>
+<p>l @ControllerAdvice 和 @ExceptionHandler 配合完成统一异常拦截处理.</p>
+<h1 id="四、项目（新闻资讯、电商、社交）"><a href="#四、项目（新闻资讯、电商、社交）" class="headerlink" title="四、项目（新闻资讯、电商、社交）"></a><strong>四、项目（新闻资讯、电商、社交）</strong></h1><h2 id="资讯项目"><a href="#资讯项目" class="headerlink" title="资讯项目"></a>资讯项目</h2><p>在技术选型时，按照黑马头条TPS为1000来计算，一个月数据量就是3千万，3年可以达到10个亿，这是当时与产品商量出来的一个提前预估的数据量级，由于mysql单表可以存储大约5千万数据，需要20个表就可以满足需求，操作简单，学习成本低，所以我们选定了mysql做了其中一种持久化方案。</p>
+<p>并且针对用户进行了合理的分库分表，来解决单表存储时数据量级过大的问题，按照用户行为类型做的分库，按照用户ID做的分表，其中对于关注来说，复杂一点，关注后就成为对方的粉丝，一条数据主要存储两份，一个是关注表，一个是粉丝表，关注表以粉丝ID为主体，同时记录被关注作者的信息；粉丝表以作者用户ID为主体，同时记录粉丝的信息，说白了就是一件事儿，一个表存储的是主动语句，一个表存储的是被动语句，因为我们的查询场景主要是根据用户ID进行数据的查询，这样避免数据分散到多个表，避免一次查询多个表，保证性能，同时分为两个表的好处是针对不同的主体方便查询，避免了用一张表时查询量过大的问题。</p>
+<p>另一种持久化方案是使用mongodb，mongodb可以轻松解决大数据量的问题，效率很高，并且mongodb面向document可以实现可扩展性并且支持丰富的数据类型和数据表达，算是对MySQL的一种辅助。最终我们结合使用两种持久化方案，使用mysql存储一份数据，用户页面的回显，例如关注或粉丝列表查询，使用mongodb记录用户行为，相当于流水的概念，用于后续进行大数据统计计算以及数据统计。</p>
+<p>由于频繁的单条往MySQL与mongodb中插入删除数据比较耗性能，并且流入MySQL中的业务行为数据我们可以不允许数据丢失，所以引用rocketmq消息中间件来批量处理用户行为数据，进行异步解耦以及批量处理，topic是按照库表加上用户的ID取模做的topic，但是针对一些埋点的点击流行为数据我们选用kafka作为消息中间件，解决方案架构也是类似的，知识MQ替换成kafka。</p>
+<p>用户行为数据业务层应用接收到后，发送到rocketMQ，下游我们实现了一个专门做持久化的服务，批量的把数据存储到DB，双写到MySQL与mongodb中，用户查询走的是MySQL，其中代码中使用了多数据源的方式，没有其他的中间件，根据业务场景，是在代码中做的路由，根据查询用户的ID做hash取模，找到对于的库表，用户行为服务采用springboot和springcloud搭建，并引入nacos、feign、gateway等组件，jdk使用1.8。</p>
+<h2 id="自动零售项目"><a href="#自动零售项目" class="headerlink" title="自动零售项目"></a>自动零售项目</h2><p><strong>1.立可得1.0到2.0升级哪些功能，为什么要做这些升级？（从商业模式、技术选型等方面进行阐述）</strong></p>
+<p>商业模式升级</p>
+<p>（1）取消了售货机和人员的一对一绑定关系，添加了“运营区域”的概念，售货机和人员都归属与区域，这样有利于经营的规模化发展。</p>
+<p>（2）强化了工单管理，新增智能派单，极大了缩减了企业的运营成本。</p>
+<p>（3）对合作商管理更加规范化、系统化、新增了合作商后台，查看分账数据更清晰、更透明。</p>
+<p>（4）C端由原来的h5升级为小程序，新增了附近售货机搜索功能。</p>
+<p> （5）运营后台新增智能排货，后台通过对同商圈的近期数据进行分析，给出最可能盈利的10个推荐上架商品。</p>
+<p>技术选型升级：</p>
+<p>（1）采用物联网领域常用的MQTT协议 ，使用EMQ作为消息中间件</p>
+<p>（2）使用Xxl-job任务调度 ，分片任务可以将大任务进行切分</p>
+<p>（3）logstach进行数据的同步。</p>
+<p>（4）使用minIO进行海量图片存储。</p>
+<p><strong>2.你们是使用mybatisPlus哪些功能简化了系统的开发?（你们为什么要使用MybatisPlus）</strong></p>
+<p>（1）使用IService接口，基本的增删改查方法都不用写了，提高了开发的效率。</p>
+<p>（2）使用自动填充功能可以使很多表都有的字段自动填充数据，我们在项目中每个表都有create_time和update_time字段，就是使用自动填充来实现的，在业务代码中并不需要对这两个属性进行处理。</p>
+<p><strong>3.请简述一下你所开发的工单模块。（需求、用到的技术）</strong></p>
+<p>工单是立可得比较核心的模块之一，工单有两大类：运维工单和运营工单。运维工单包括投放工单、撤机工单、维修工单三种；运营工单指的就是补货工单。</p>
+<p>手动工单：管理员在后台创建工单，指派给相关人员（运营或运维）。运营或运维人员在运营管理APP中可以看到指派给自己的工单，点击接收或取消。当完成工单时运营或运维人员在运营管理APP点击完成。</p>
+<p>自动工单：维修和补货工单可以由系统自动创建。当售货机发生故障时，会发送故障状态信息到服务端，服务端会自动创建维修工单，被指派人的选择算法是系统根据当前区域当天工单量最少的人。补货工单是每天定时进行的，会扫描所有的缺货的售货机自动计算补货量，创建补货工单。</p>
+<p>&gt; 延展问题：工单模块用到哪些技术？</p>
+<p>&gt; 这里采用的技术主要有，使用redis的zset存储每个区域的每个人的当天工单量（因为zset自动排序，非常方便），使用xxl-job进行每日工单量的初始化，使用xxl-job的分片广播，解决补货工单任务时间超长的问题，使用emq的共享订阅接收售货机发来的状态报文。</p>
+<p><strong>4.请简述一下从下单到发货是怎么实现的？</strong></p>
+<p>（1）支付成功后微信平台回调订单微服务</p>
+<p>（2）订单微服务发送出货通知到emq，主题为vm&#x2F;售货机编号&#x2F;vendoutReq</p>
+<p>（3）售货机订阅出货通知，收到消息后进行发货（调用串口）</p>
+<p>（4）售货机出货成功后上报出货结果到emq ，主题为server&#x2F;售货机编号&#x2F;vendoutResp</p>
+<p>（5）订单微服务和售货机微服务以群组方式共享订阅该主题，分别进行业务处理：订单微服务更改订单状态；售货机微服务更改货道库存。</p>
+<h2 id="电商项目"><a href="#电商项目" class="headerlink" title="电商项目"></a>电商项目</h2><p><strong>1、微服务网关中如何实现限流？</strong></p>
+<p>令牌桶算法是比较常见的限流算法之一，大概描述如下： </p>
+<p>1）所有的请求在处理之前都需要拿到一个可用的令牌才会被处理； </p>
+<p>2）根据限流大小，设置按照一定的速率往桶里添加令牌； </p>
+<p>3）桶设置最大的放置令牌限制，当桶满时、新添加的令牌就被丢弃或者拒绝； </p>
+<p>4）请求达到后首先要获取令牌桶中的令牌，拿着令牌才可以进行其他的业务逻辑，处理完业务逻辑之后，将令牌直接删 除；</p>
+<p>5）令牌桶有最低限额，当桶中的令牌达到最低限额的时候，请求处理完之后将不会删除令牌，以此保证足够的限流</p>
+<p><strong>2、各个微服务中如何实现用户身份识别的？</strong></p>
+<p>1.用户登录成功后，会将令牌信息存入到cookie中(一般建议存入到头文件中) </p>
+<p>2.用户携带Cookie(或者Header)中的令牌访问微服务网关 </p>
+<p>3.微服务网关先获取头文件中的令牌信息，如果Header中没有Authorization令牌信息，则取参数中找，参数中如果没 </p>
+<p>有，则取Cookie中找Authorization，最后将令牌信息封装到Header中，并调用其他微服务 </p>
+<p>4.其他微服务会获取头文件中的Authorization令牌信息，然后匹配令牌数据是否能使用公钥解密，如果解密成功说明 </p>
+<p>用户已登录，解密失败，说明用户未登录</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://anleyyds.github.io">Dog</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://anleyyds.github.io/2023/10/31/Java%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E8%AF%9D%E6%9C%AF-%E6%95%B4%E5%90%88%E8%B5%84%E6%96%99/">https://anleyyds.github.io/2023/10/31/Java%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E8%AF%9D%E6%9C%AF-%E6%95%B4%E5%90%88%E8%B5%84%E6%96%99/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://anleyyds.github.io" target="_blank">Dog博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="http:///p2.qhimg.com/t0178b6f9b8d0f98dbe.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/../img/wx.png" target="_blank"><img class="post-qr-code-img" src="/../img/wx.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/../img/zfb.jpg" target="_blank"><img class="post-qr-code-img" src="/../img/zfb.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/10/31/spring%E7%9B%B8%E5%85%B3/Redis%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%8F%82%E8%80%83%E5%9B%9E%E7%AD%94/" title=""><img class="cover" src="http:///p4.qhimg.com/t0178fb7b485ab7e6ee.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2023/10/11/springcloud%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/" title="springCloud入门介绍"><img class="cover" src="http:///p4.qhimg.com/t016ab944ce31ada8b2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">springCloud入门介绍</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81ODkyMi8zNTM4NA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="http:///p9.qhimg.com/t013cdf0c4dec117f66.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Dog</div><div class="author-info__description">Dog博客，欢迎大家访问</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/anleyyds"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/anleyyds" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1016033541@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://anleyyds.github.io/" target="_blank" title="博客"><i class="fa-sharp fa-regular fa-magnifying-glass fa-bounce" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D-3-5%E5%88%86%E9%92%9F"><span class="toc-number">1.</span> <span class="toc-text">一、自我介绍(3-5分钟)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BA%BA%E4%BA%8B%E8%AF%9D%E6%9C%AF"><span class="toc-number">2.</span> <span class="toc-text">二、人事话术</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E7%A6%BB%E8%81%8C%EF%BC%9F"><span class="toc-number">2.1.</span> <span class="toc-text">1、为什么离职？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%A6%82%E4%BD%95%E8%B0%88%E8%96%AA%E8%B5%84%EF%BC%9F"><span class="toc-number">2.2.</span> <span class="toc-text">2、如何谈薪资？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%8A%A0%E7%8F%AD%EF%BC%9F%EF%BC%88%E7%90%86%E8%A7%A3%EF%BC%8C%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">3、如何看待加班？（理解，提高工作效率）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%9C%A8%E4%B9%8B%E5%89%8D%E7%9A%84%E5%B7%A5%E4%BD%9C%E4%B8%AD%E6%9C%80%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E4%BA%8B%E6%83%85%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">2.4.</span> <span class="toc-text">4、在之前的工作中最有意义的事情是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E4%B8%BA%E4%BD%95%E8%BD%AC%E8%A1%8C%E6%9D%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%EF%BC%9F"><span class="toc-number">2.5.</span> <span class="toc-text">5、为何转行来计算机专业？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">3.</span> <span class="toc-text">三、知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81ThreadLocal-%E7%9A%84%E5%8E%9F%E7%90%86%EF%BC%88%E9%AB%98%E8%96%AA%E5%B8%B8%E9%97%AE%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">1、ThreadLocal 的原理（高薪常问）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%90%8C%E6%AD%A5%E9%94%81%E3%80%81%E6%AD%BB%E9%94%81%E3%80%81%E4%B9%90%E8%A7%82%E9%94%81%E3%80%81%E6%82%B2%E8%A7%82%E9%94%81-%EF%BC%88%E9%AB%98%E8%96%AA%E5%B8%B8%E9%97%AE%EF%BC%89"><span class="toc-number">3.2.</span> <span class="toc-text">2、同步锁、死锁、乐观锁、悲观锁 （高薪常问）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%8F%8D%E5%B0%84"><span class="toc-number">3.3.</span> <span class="toc-text">3、反射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81Hashmap-%E5%92%8C-hashtable-ConcurrentHashMap-%E5%8C%BA%E5%88%AB%EF%BC%88%E9%AB%98%E8%96%AA%E5%B8%B8%E9%97%AE%EF%BC%89"><span class="toc-number">3.4.</span> <span class="toc-text">4、Hashmap 和 hashtable ConcurrentHashMap 区别（高薪常问）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%9A%84%E5%88%86%E7%B1%BB%EF%BC%88%E9%AB%98%E8%96%AA%E5%B8%B8%E9%97%AE%EF%BC%89"><span class="toc-number">3.5.</span> <span class="toc-text">5、线程池的分类（高薪常问）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81JDK1-8-%E5%A0%86%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84%EF%BC%88%E9%AB%98%E8%96%AA%E5%B8%B8%E9%97%AE%EF%BC%89"><span class="toc-number">3.6.</span> <span class="toc-text">6、JDK1.8 堆内存结构（高薪常问）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81Hashmap-%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="toc-number">3.7.</span> <span class="toc-text">7、Hashmap 的底层原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E"><span class="toc-number">3.8.</span> <span class="toc-text">8、存储引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88"><span class="toc-number">3.9.</span> <span class="toc-text">9、如何避免索引失效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81SQL-%E8%AF%AD%E5%8F%A5%E8%B0%83%E4%BC%98"><span class="toc-number">3.10.</span> <span class="toc-text">10、SQL 语句调优</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81Spring-%E7%9A%84%E4%BA%8B%E5%8A%A1%E4%BC%A0%E6%92%AD%E8%A1%8C%E4%B8%BA"><span class="toc-number">3.11.</span> <span class="toc-text">11、Spring 的事务传播行为</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81-RocketMQ-%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E6%B6%88%E6%81%AF%E4%B8%8D%E4%B8%A2%E5%A4%B1"><span class="toc-number">3.12.</span> <span class="toc-text">12、 RocketMQ 如何保证消息不丢失</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81redis-%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-number">3.13.</span> <span class="toc-text">13、redis 的持久化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E3%80%81SpringCloud-%E6%9C%89%E5%93%AA%E4%BA%9B%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6"><span class="toc-number">3.14.</span> <span class="toc-text">14、SpringCloud 有哪些核心组件?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15%E3%80%81SpringBoot-%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="toc-number">3.15.</span> <span class="toc-text">15、SpringBoot 常用注解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E9%A1%B9%E7%9B%AE%EF%BC%88%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF%E3%80%81%E7%94%B5%E5%95%86%E3%80%81%E7%A4%BE%E4%BA%A4%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">四、项目（新闻资讯、电商、社交）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E8%AE%AF%E9%A1%B9%E7%9B%AE"><span class="toc-number">4.1.</span> <span class="toc-text">资讯项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E9%9B%B6%E5%94%AE%E9%A1%B9%E7%9B%AE"><span class="toc-number">4.2.</span> <span class="toc-text">自动零售项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E5%95%86%E9%A1%B9%E7%9B%AE"><span class="toc-number">4.3.</span> <span class="toc-text">电商项目</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/10/31/Redis%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%8F%82%E8%80%83%E5%9B%9E%E7%AD%94/" title="Redis相关面试题"><img src="http:///p8.qhimg.com/t01c3e5ede8803a6c53.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis相关面试题"/></a><div class="content"><a class="title" href="/2023/10/31/Redis%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%8F%82%E8%80%83%E5%9B%9E%E7%AD%94/" title="Redis相关面试题">Redis相关面试题</a><time datetime="2023-10-31T05:00:00.000Z" title="发表于 2023-10-31 13:00:00">2023-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/31/spring%E7%9B%B8%E5%85%B3/Redis%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%8F%82%E8%80%83%E5%9B%9E%E7%AD%94/" title="无题"><img src="http:///p4.qhimg.com/t0178fb7b485ab7e6ee.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2023/10/31/spring%E7%9B%B8%E5%85%B3/Redis%E9%9D%A2%E8%AF%95%E9%A2%98-%E5%8F%82%E8%80%83%E5%9B%9E%E7%AD%94/" title="无题">无题</a><time datetime="2023-10-31T04:06:58.481Z" title="发表于 2023-10-31 12:06:58">2023-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/31/Java%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E8%AF%9D%E6%9C%AF-%E6%95%B4%E5%90%88%E8%B5%84%E6%96%99/" title="java面试资料"><img src="http:///p2.qhimg.com/t0178b6f9b8d0f98dbe.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java面试资料"/></a><div class="content"><a class="title" href="/2023/10/31/Java%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E8%AF%9D%E6%9C%AF-%E6%95%B4%E5%90%88%E8%B5%84%E6%96%99/" title="java面试资料">java面试资料</a><time datetime="2023-10-31T04:00:00.000Z" title="发表于 2023-10-31 12:00:00">2023-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/11/springcloud%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/" title="springCloud入门介绍"><img src="http:///p4.qhimg.com/t016ab944ce31ada8b2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="springCloud入门介绍"/></a><div class="content"><a class="title" href="/2023/10/11/springcloud%E5%85%A5%E9%97%A8%E4%BB%8B%E7%BB%8D/" title="springCloud入门介绍">springCloud入门介绍</a><time datetime="2023-10-11T09:50:00.000Z" title="发表于 2023-10-11 17:50:00">2023-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/11/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0%EF%BC%88%E8%AF%A6%E7%BB%86%E7%89%88%EF%BC%89/" title="微服务详细讲解"><img src="http:///p4.qhimg.com/t016ab944ce31ada8b2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="微服务详细讲解"/></a><div class="content"><a class="title" href="/2023/10/11/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0%EF%BC%88%E8%AF%A6%E7%BB%86%E7%89%88%EF%BC%89/" title="微服务详细讲解">微服务详细讲解</a><time datetime="2023-10-11T09:50:00.000Z" title="发表于 2023-10-11 17:50:00">2023-10-11</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('http:///p2.qhimg.com/t0178b6f9b8d0f98dbe.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2023 By Dog</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">非常高兴认识大家，欢迎大家！</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="8444991407" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>
